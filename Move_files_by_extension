@@ -1,0 +1,27 @@
+# script to move unnecessary files from the current working directory
+import os
+import re
+import shutil
+path = os.getcwd()
+lis = os.listdir(path)
+name = input("Enter the Target folder name")
+if name not in lis:
+    print("Creating folder...")
+    os.mkdir(name)
+c=0
+'''
+shutil.copy2('/src/dir/file.ext', '/dst/dir/newname.ext') # complete target filename given
+'''
+for x in lis:
+    y = re.sub(r'[A-Za-z0-9]+\.',"",x)
+    try:
+        if y in ['py','exe','o','obj','c','cpp','txt','qss']:    ## list of extensions 
+            shutil.copy2(path+'/'+x,path+'/'+name+'/'+x)
+            os.remove(path+'/'+x)
+            c+=1
+            print("Moved",x)
+    except:
+        print(x)
+            
+print("Done!")
+n = input("moved "+str(c)+" files")
