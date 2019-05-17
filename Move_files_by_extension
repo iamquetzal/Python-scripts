@@ -1,4 +1,5 @@
 # script to move unnecessary files from the current working directory
+#put this file in the target directory and run it. Change the extensions from below list
 import os
 import re
 import shutil
