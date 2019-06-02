@@ -1,0 +1,40 @@
+from pyautogui import *
+from time import sleep
+def xyz():
+    moveTo(670,755) #open your web browser ##use position() to get your webbrowser's coordinates
+    click()
+    sleep(5)
+    hotkey('ctrl','t')  #open a new tab
+    typewrite("https://hackerrank.com/",interval = 0.1) #type the website name
+    press('enter')
+    sleep(7)
+    moveTo(1122,216)
+    click()
+    sleep(7)
+    moveTo(202,604)
+    click()
+    sleep(7)
+    moveTo(638,389)
+    click()
+    click()
+    click()
+    press('del')
+    typewrite("bindalmukul99@gmail.com",interval=0.1)  #your email id or username
+    moveTo(603,452)
+    click()
+    click()
+    click()
+    press('del')
+    typewrite("your password here",interval=0.1) # your password
+    moveTo(858,578)
+    click()
+    sleep(10) 
+    moveTo(1181,125)
+    click()
+    moveTo(1162,504)      #**logs out**
+    click()
+    #alert(text='Operation Successful', title='Attention', button='click me ')
+    
+    
+    
+xyz()
