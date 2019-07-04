@@ -1,3 +1,10 @@
+'''
+1)install selenium -->  pip install selenium
+2)add the path of chrome driver to environment variables --> e.g "C:\chromedriver_win32.exe\"
+3)run this script
+'''
+
+
 from selenium import webdriver
 from time import sleep
 driver = webdriver.Chrome()
